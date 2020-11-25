@@ -4,6 +4,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C30362C0A53D5BB
 echo "deb [by-hash=force] https://community-packages.deepin.com/deepin apricot main contrib non-free" | sudo tee  /etc/apt/sources.list.d/deepin.list
 echo "deb https://community-store-packages.deepin.com/appstore eagle appstore" | sudo tee  /etc/apt/sources.list.d/deepin_appstore.list
 codename=`cat /etc/lsb-release |grep DISTRIB_CODENAME|awk -F '=' '{print $2}'`
+sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install -t $codename deepin-wine5 -fy
 sudo apt clean
