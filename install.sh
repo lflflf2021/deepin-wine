@@ -7,7 +7,7 @@ codename=`cat /etc/lsb-release |grep DISTRIB_CODENAME|awk -F '=' '{print $2}'`
 sudo apt update
 sudo apt install -t $codename deepin-wine5 -fy
 sudo apt clean
-sudo apt install com.qq.weixin.deepin com.taobao.aliclient.qianniu.deepin com.qq.im.deepin com.taobao.wangwang.deepin
+sudo apt install -t $codename com.qq.weixin.deepin com.taobao.aliclient.qianniu.deepin com.qq.im.deepin com.taobao.wangwang.deepin
 sudo rm -f /etc/apt/sources.list.d/deepin.list
 sudo rm -f /etc/apt/sources.list.d/deepin_appstore.list
 sudo apt update
